@@ -1,0 +1,159 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #0c192c;
+    font-family: "Outfit", serif;
+    color: white;
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  .flxbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper {
+    height: 100vh;
+  }
+
+  .container {
+    width: 353px;
+    background-color: #15273f;
+    padding: 20px 20px 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #0c1729;
+  }
+
+  .feature-img {
+    height: 300px;
+    background-image: url("images/image-equilibrium.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .feature-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 155, 177, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .feature-img:hover::after {
+    opacity: 1;
+  }
+
+  .feature-img img {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    z-index: 1;
+  }
+
+  .feature-img:hover img {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  section h1 {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 18px;
+  }
+
+  section h1:hover {
+    color: hsl(178, 100%, 50%);
+  }
+
+  section p {
+    font-size: 18px;
+    color: #96abca;
+    margin-bottom: 20px;
+    font-weight: 200;
+  }
+
+  .product-details-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-name,
+  .time-left {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .product-name span {
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+  }
+
+  .time-left span {
+    color: #96abca;
+    font-weight: 200;
+  }
+
+  hr {
+    border: 0.1px solid #2f4159;
+    width: 100%;
+    margin: 20px;
+    border-radius: 10px;
+  }
+
+  .bottom-section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bottom-section img {
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .bottom-section span {
+    color: #96abca;
+    font-weight: 200;
+  }
+
+  .bottom-section span b {
+    color: white;
+    cursor: pointer;
+  }
+
+  .bottom-section span b:hover {
+    color: hsl(178, 100%, 50%);
+  }
+
+  footer {
+    padding: 10px;
+    background-color: #ffffff;
+    color: black;
+    margin-top: 20px;
+  }
